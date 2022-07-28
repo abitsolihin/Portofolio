@@ -20,8 +20,8 @@ function Accordion(props) {
   //open animation with react spring
   const openAnimation = useSpring({
     from: { opacity: '0', maxHeight: '60px' },
-    to: { opacity: '1', maxHeight: open ? '100%' : '60px' },
-    config: { duration: '100' },
+    to: { opacity: '1', maxHeight: open ? '200px' : '60px' },
+    config: { duration: '500' },
   });
   //rotate animation
   const iconAnimation = useSpring({
@@ -36,16 +36,18 @@ function Accordion(props) {
     config: { duration: '120' },
   });
   return (
-    <animated.div className="accordion__item" style={openAnimation}>
-      <div className="accordion__header" onClick={toggleHandler}>
-        <div className="accordion__icon">{props.icon}</div>
-        <h4 style={styles.accordionTitle}>{props.title}</h4>
-        <animated.i style={iconAnimation}>
-          <MdExpandLess />
-        </animated.i>
-      </div>
-      <div className="accordion__content">{props.text}</div>
-    </animated.div>
+    <section className="accordion__section">
+      <animated.div className="accordion__item" style={openAnimation}>
+        <div className="accordion__header" onClick={toggleHandler}>
+          <div className="accordion__icon">{props.icon}</div>
+          <h4 style={styles.accordionTitle}>{props.title}</h4>
+          <animated.i style={iconAnimation}>
+            <MdExpandLess />
+          </animated.i>
+        </div>
+        <div className="accordion__content">{props.text}</div>
+      </animated.div>
+    </section>
   );
 }
 export default Accordion;
