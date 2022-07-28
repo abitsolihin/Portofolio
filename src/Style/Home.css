@@ -1,0 +1,62 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Hwrapper {
+  height: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.box h1 span {
+  color: rgb(236, 240, 36);
+  font-size: 2.5rem;
+  margin: 0;
+}
+.box h3 {
+  margin: 0;
+}
+.box h3 span {
+  margin: 0;
+  color: rgb(236, 240, 36);
+}
+.box p {
+  margin: 0;
+}
+.box img {
+  width: 200px;
+  align-self: flex-end;
+}
+.box .aButton {
+  background: rgb(236, 240, 36);
+  align-self: flex-start;
+  border: 2px solid rgb(236, 240, 36);
+  border-radius: 2px;
+  margin-top: 15px;
+  box-shadow: rgba(175, 178, 26, 0.85) 3px 5px;
+  transition: all 0.3s ease;
+  width: 80px;
+}
+.box .aButton:hover {
+  transform: scale(1.1);
+}
+.box .tButton:hover {
+  color: rgb(236, 240, 36);
+}

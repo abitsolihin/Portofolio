@@ -1,0 +1,34 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  width: 100%;
+}
+.content-wrapper {
+  padding: 1rem;
+  border: 1px solid rgb(253, 255, 147);
+  border-radius: 5px;
+  box-shadow: rgb(251, 255, 0) 0 0 8px;
+  backdrop-filter: blur(2px);
+}
+.content-title {
+  color: rgb(236, 240, 36);
+  padding-left: 1px;
+}
+.content-description {
+  padding-left: 2px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.content-links {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+}
+.content-links a {
+  align-self: flex-start;
+  padding: 0;
+}

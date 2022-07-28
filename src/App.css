@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Montserrat:wght@100;400;600&family=Poppins&family=Ubuntu:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #202020;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(236, 240, 36);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(175, 178, 26, 0.85);
+}
+
+.app {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 768px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  align-items: center;
+}
+.brand {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+.brand span {
+  color: rgb(236, 240, 36);
+}
+.nav {
+  background-color: #fafafa;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 8px;
+  height: auto;
+  border-radius: 25px;
+  border: 2px solid rgb(236, 240, 36);
+  position: fixed;
+  transform: translateY(85vh);
+  box-shadow: rgba(175, 178, 26, 0.85) 0 5px 0;
+}
+.nav a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+.nav a:hover {
+  color: rgb(236, 240, 36);
+  transform: scale(1.1);
+}
+
+@media screen {
+  @media (max-width: 48em) {
+    .app {
+      width: 550px;
+    }
+  }
+}
+@media screen {
+  @media (max-width: 35em) {
+    .app {
+      width: 400px;
+    }
+  }
+}
