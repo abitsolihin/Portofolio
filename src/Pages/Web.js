@@ -16,7 +16,7 @@ const WebsitePages = () => {
           <a href="https://movez.pages.dev/">
             <AiOutlineLink color="rgb(236, 240, 36)" size={20} />
           </a>
-          <a href="https://www.github.com">
+          <a href="https://www.github.com/SolDuck/MoveZ">
             <AiOutlineGithub color="rgb(236, 240, 36)" size={20} />
           </a>
         </div>
@@ -29,10 +29,10 @@ const WebsitePages = () => {
           <p>Website Ini Berisi Biodata mengenai Siswa yang ada di satu kelas dan gallery kelas.</p>
         </div>
         <div className="content-links">
-          <a href="https://multimediagallery.000webhostapp.com/">
+          <a href="https://multimedia2.pages.dev/">
             <AiOutlineLink color="rgb(236, 240, 36)" size={20} />
           </a>
-          <a href="https://www.github.com">
+          <a href="https://github.com/SolDuck/multimedia2.github.io">
             <AiOutlineGithub color="rgb(236, 240, 36)" size={20} />
           </a>
         </div>

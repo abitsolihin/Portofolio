@@ -165,7 +165,15 @@ const About = () => {
               </ul>
             }
           />
-          <Accordion icon={<FaCode size={25} />} title="Backend developer" text="NONE" />
+          <Accordion
+            icon={<FaCode size={25} />}
+            title="Backend developer"
+            text={
+              <ul>
+                <li>NODE JS</li>
+              </ul>
+            }
+          />
           <Accordion
             icon={<FaPenNib size={25} />}
             title="Design Graphics"
