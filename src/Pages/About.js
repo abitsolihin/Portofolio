@@ -102,7 +102,7 @@ const About = () => {
           <div id="services-wrapper" className="services-Wrapper">
             <div className="icon-wrapper">
               <div className="icon">
-                <AiOutlineAntDesign size={50} />
+                <AiOutlineAntDesign color="rgb(236, 240, 36)" size={50} />
               </div>
             </div>
             <div className="title-wrapper">
@@ -113,7 +113,7 @@ const About = () => {
           <div className="services-Wrapper">
             <div className="icon-wrapper">
               <div className="icon">
-                <AiOutlineHtml5 size={50} />
+                <AiOutlineHtml5 color="rgb(236, 240, 36)" size={50} />
               </div>
             </div>
             <div className="title-wrapper">
@@ -126,7 +126,7 @@ const About = () => {
           <div className="services-Wrapper">
             <div className="icon-wrapper">
               <div id="mouse" className="icon">
-                <Gi3DMeeple size={50} />
+                <Gi3DMeeple color="rgb(236, 240, 36)" size={50} />
               </div>
             </div>
             <div className="title-wrapper">
@@ -137,7 +137,7 @@ const About = () => {
           <div id="iContainer" className="services-Wrapper">
             <div className="icon-wrapper">
               <div id="mouse1" className="icon">
-                <MdDesignServices className="icon2" size={50} />
+                <MdDesignServices color="rgb(236, 240, 36)" size={50} />
               </div>
             </div>
             <div className="title-wrapper">

@@ -36,6 +36,7 @@
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   align-items: center;
+  padding-bottom: 100px;
 }
 .brand {
   margin: 10px;
