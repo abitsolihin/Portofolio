@@ -41,7 +41,7 @@
   margin: 0;
 }
 .box img {
-  width: 200px;
+  width: 100%;
   align-self: flex-end;
 }
 .box .aButton {

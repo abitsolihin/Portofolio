@@ -10,6 +10,7 @@ import { MdDesignServices } from 'react-icons/md';
 import { Gi3DMeeple } from 'react-icons/gi';
 import { SiStyledcomponents } from 'react-icons/si';
 import Accordion from '../Components/Accordion';
+import Profile2 from '../images/Profile2.png';
 
 const About = () => {
   const [diKlik, setDiklik] = useState(false);
@@ -49,8 +50,8 @@ const About = () => {
               <Link to="/About">Download CV</Link>
             </button>
           </div>
-          <div className="abox">
-            <img className="fprofile" alt="foto profile" />
+          <div className="aBox">
+            <img src={Profile2} className="fprofile" alt="foto profile" />
           </div>
         </div>
 
@@ -125,7 +126,7 @@ const About = () => {
         <div className="services_container">
           <div className="services-Wrapper">
             <div className="icon-wrapper">
-              <div id="mouse" className="icon">
+              <div className="icon">
                 <Gi3DMeeple color="rgb(236, 240, 36)" size={50} />
               </div>
             </div>

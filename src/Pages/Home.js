@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Style/Home.css';
-import img1 from '../images/img1.png';
+import Profile1 from '../images/Profile1.png';
 import { Link } from 'react-router-dom';
 import { SiAboutdotme } from 'react-icons/si';
 
@@ -23,7 +23,7 @@ const Home = () => {
           </button>
         </div>
         <div className="box">
-          <img className="fprofile" src={img1} alt="foto profile" />
+          <img className="fprofile" src={Profile1} alt="foto profile" />
         </div>
       </div>
     </section>

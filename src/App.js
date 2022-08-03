@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home';
@@ -10,11 +11,26 @@ import { AiFillHome, AiOutlineHome } from 'react-icons/ai';
 import { SiAboutdotme } from 'react-icons/si';
 import { AiOutlineProject } from 'react-icons/ai';
 import { AiFillProject } from 'react-icons/ai';
+import { BiHide } from 'react-icons/bi';
+import { useSpring, animated } from '@react-spring/web';
 
 function App() {
+  const [hide, setHide] = useState(false);
+
+  let toggleHandler = (e) => {
+    setHide(!hide);
+  };
+
+  const hideAnimation = useSpring({
+    from: { transform: 'translateY(85vh) translateX(0)' },
+    to: { transform: hide ? 'translateY(85vh) translateX(110vh)' : 'translateY(85vh) translateX(0)' },
+  });
+
   const navLinkStyle = ({ isActive }) => {
     return {
-      color: isActive ? 'rgb(236, 240, 36)' : '#202020',
+      padding: ' 0.4rem',
+      backgroundColor: isActive ? 'rgb(236, 240, 36)' : '#fff',
+      borderRadius: isActive ? '50%' : '0',
     };
   };
 
@@ -34,17 +50,22 @@ function App() {
         </Route>
       </Routes>
 
-      <nav className="nav">
-        <NavLink style={navLinkStyle} to="/">
-          {({ isActive }) => (isActive ? <AiFillHome size={25} /> : <AiOutlineHome size={25} />)}
-        </NavLink>
-        <NavLink style={navLinkStyle} to="/About">
-          <SiAboutdotme size={25} />
-        </NavLink>
-        <NavLink style={navLinkStyle} to="/Projects">
-          {({ isActive }) => (isActive ? <AiFillProject size={25} /> : <AiOutlineProject size={25} />)}
-        </NavLink>
-      </nav>
+      <animated.nav style={hideAnimation} className="nav">
+        <div onClick={toggleHandler} className="hide-button">
+          <BiHide size={25} color="#202020" />
+        </div>
+        <div className="navWrapper">
+          <NavLink style={navLinkStyle} to="/">
+            {({ isActive }) => (isActive ? <AiFillHome size={25} /> : <AiOutlineHome size={25} />)}
+          </NavLink>
+          <NavLink style={navLinkStyle} to="/About">
+            <SiAboutdotme size={25} />
+          </NavLink>
+          <NavLink style={navLinkStyle} to="/Projects">
+            {({ isActive }) => (isActive ? <AiFillProject size={25} /> : <AiOutlineProject size={25} />)}
+          </NavLink>
+        </div>
+      </animated.nav>
     </div>
   );
 }

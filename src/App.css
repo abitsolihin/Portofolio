@@ -52,16 +52,15 @@
   background-color: #fafafa;
   width: 300px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 8px;
   height: auto;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid rgb(236, 240, 36);
   position: fixed;
-  transform: translateY(85vh);
+  transform: translateY(85vh) translateX(110vh);
   box-shadow: rgba(175, 178, 26, 0.85) 0 5px 0;
+  transition: 0.5s ease;
 }
+
 .nav a {
   display: flex;
   text-decoration: none;
@@ -72,10 +71,26 @@
   align-items: center;
 }
 .nav a:hover {
-  color: rgb(236, 240, 36);
   transform: scale(1.1);
 }
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  width: 70%;
+}
 
+.hide-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(236, 240, 36);
+  width: 30%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  cursor: pointer;
+}
 @media screen {
   @media (max-width: 48em) {
     .app {
