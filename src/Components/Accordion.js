@@ -1,9 +1,12 @@
 import { React, useState } from 'react';
 import { MdExpandLess } from 'react-icons/md';
 import { useSpring, animated } from '@react-spring/web';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import './../Style/Accordion.css';
 function Accordion(props) {
+  Aos.init();
   const [open, setOpen] = useState(false);
   //toggle accordion function
   let toggleHandler = (e) => {
@@ -36,7 +39,7 @@ function Accordion(props) {
     config: { duration: '120' },
   });
   return (
-    <section className="accordion__section">
+    <section data-aos="fade-down" className="accordion__section">
       <animated.div className="accordion__item" style={openAnimation}>
         <div className="accordion__header" onClick={toggleHandler}>
           <div className="accordion__icon">{props.icon}</div>
