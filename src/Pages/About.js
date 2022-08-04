@@ -52,6 +52,14 @@ const About = () => {
           </div>
           <div className="aBox">
             <img src={Profile2} className="fprofile" alt="foto profile" />
+            <div style={{ transform: 'translateY(-70px) translateX(-170px)' }} className="floating__wrapper">
+              <h1>Web Developer</h1>
+              <p>1+ Years Experience</p>
+            </div>
+            <div style={{ transform: 'translateY(70px) translateX(170px)' }} className="floating__wrapper">
+              <h1>Design Graphics</h1>
+              <p>2+ Years Experience</p>
+            </div>
           </div>
         </div>
 

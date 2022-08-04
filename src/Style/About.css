@@ -17,6 +17,7 @@
   justify-content: center;
   align-items: center;
   flex-basis: 50%;
+  position: relative;
 }
 
 .aBox h1 {
@@ -66,6 +67,21 @@
   border: none;
   border-radius: 2px;
   box-shadow: rgba(175, 178, 26, 0.85) 2px 4px 1px;
+}
+
+.floating__wrapper {
+  position: absolute;
+  padding: 10px;
+  background-color: rgb(236, 240, 36);
+  border-radius: 5px;
+  color: #202020;
+  box-shadow: #202020 0 0 10px;
+}
+.floating__wrapper > h1 {
+  font-size: 18px;
+}
+.floating__wrapper > p {
+  font-size: 12px;
 }
 
 .diKlik {
@@ -249,9 +265,9 @@
   content: '  ';
   position: absolute;
   width: 15%;
-  height: 10.5%;
+  height: 12.5%;
   left: 73%;
-  top: -1.85%;
+  top: -2.85%;
   border-left: 2px solid rgb(236, 240, 36);
 }
 /**Create Cross Lines */
