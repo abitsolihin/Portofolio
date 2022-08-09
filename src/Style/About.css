@@ -262,6 +262,7 @@
   left: 73%;
   top: -19.3%;
   border-left: 2px solid rgb(236, 240, 36);
+  z-index: -1;
 }
 /**Create Cross Lines */
 .sContainer::before {
