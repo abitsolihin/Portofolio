@@ -76,9 +76,23 @@
   }
 }
 @media screen {
-  @media (max-width: 35em) {
+  @media (max-width: 500px) {
     .app {
       width: 400px;
+    }
+  }
+}
+@media screen {
+  @media (max-width: 450px) {
+    .app {
+      width: 350px;
+    }
+  }
+}
+@media screen {
+  @media (max-width: 400px) {
+    .app {
+      width: 300px;
     }
   }
 }
