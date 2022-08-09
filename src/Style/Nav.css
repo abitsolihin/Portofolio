@@ -1,0 +1,32 @@
+.nav {
+  background-color: #fff;
+  width: 300px;
+  display: flex;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid rgb(236, 240, 36);
+  box-shadow: rgba(175, 178, 26, 0.85) 0 5px 0;
+  transition: 0.3s all ease;
+}
+.navWrapper > a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
+.navWrapper > a:hover {
+  transform: scale(1.1);
+}
+.navWrapper > a:active {
+  transform: scale(0.9);
+}
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  width: 70%;
+}

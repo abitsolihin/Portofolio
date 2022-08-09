@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './../Style/About.css';
 import { FaLaptopCode } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
@@ -14,16 +14,11 @@ import Profile2 from '../images/Profile2.png';
 import { useSpring, animated } from '@react-spring/web';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useMediaQuery } from '@material-ui/core';
 
 const About = () => {
-  const [diKlik, setDiklik] = useState(false);
-
-  const animate = () => {
-    setDiklik(true);
-    setTimeout(() => setDiklik(false), 200);
-  };
   Aos.init();
-
+  const small = useMediaQuery('(min-width: 48em)');
   const fadeIn = useSpring({
     from: { opacity: '0' },
     to: { opacity: '1' },
@@ -31,14 +26,14 @@ const About = () => {
   });
   const fadeRight = useSpring({
     loop: { reverse: true },
-    from: { transform: 'translateY(-90px) translateX(-200px)', opacity: '1' },
-    to: { transform: 'translateY(-70px) translateX(-170px)', opacity: '1' },
+    from: { transform: small ? 'translateY(-90px) translateX(-200px)' : 'translateY(-100px) translateX(-120px)', opacity: '1' },
+    to: { transform: small ? 'translateY(-70px) translateX(-170px)' : 'translateY(-70px) translateX(-100px)', opacity: '1' },
     config: { duration: '2000' },
   });
   const fadeLeft = useSpring({
     loop: { reverse: true },
-    from: { transform: 'translateY(70px) translateX(200px)', opacity: '1' },
-    to: { transform: 'translateY(70px) translateX(170px)', opacity: '1' },
+    from: { transform: small ? 'translateY(90px) translateX(200px)' : 'translateY(100px) translateX(120px)', opacity: '1' },
+    to: { transform: small ? 'translateY(70px) translateX(170px)' : 'translateY(70px) translateX(100px)', opacity: '1' },
     config: { duration: '2000' },
   });
 
@@ -56,7 +51,7 @@ const About = () => {
             <p data-aos="fade-right" data-aos-delay="100">
               Hi, my name is Abit Solihin, I am a web developer and graphic designer.
             </p>
-            <div data-aos="fade-right" data-aos-delay="150" className="aIcon">
+            <div data-aos="fade-right" data-aos-delay="150" data-aos-offset="10" className="aIcon">
               <a href="https://www.instagram.com">
                 <BsInstagram size={17} />
               </a>
@@ -70,7 +65,7 @@ const About = () => {
                 <AiOutlineGithub size={20} />
               </a>
             </div>
-            <button data-aos="fade-right" data-aos-delay="200" onClick={animate} className={diKlik ? 'diKlik' : 'aButton'}>
+            <button data-aos="fade-right" data-aos-delay="200" data-aos-offset="10" className="aButton">
               <Link to="/About">Download CV</Link>
             </button>
           </div>
@@ -86,7 +81,8 @@ const About = () => {
             </animated.div>
           </div>
         </div>
-
+      </section>
+      <section className="tools_section">
         <div className="tContainer">
           <div data-aos="fade-in" data-aos-delay="350" className="tTitle">
             <h1>Languages & Tools</h1>

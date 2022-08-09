@@ -18,7 +18,6 @@ const WebsitePages = () => {
       })
       .catch((error) => {
         console.log(error);
-        return <h1>Jaringan Ilang</h1>;
       });
   });
 

@@ -49,11 +49,11 @@
 .accordion__content {
   margin: 5px;
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 30px;
   }
   .accordion__item {
-    width: 80%;
+    width: 100%;
   }
 }
