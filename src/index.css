@@ -1,7 +1,6 @@
 body {
   background-image: url('/src/images/Background.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
