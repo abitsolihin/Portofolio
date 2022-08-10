@@ -28,8 +28,8 @@ function App() {
             <Route path="UIUX" element={<UIUX />} />
           </Route>
         </Routes>
-        <div className="navigation-container">{small ? <Nav /> : <BottomNav />}</div>
       </div>
+      <div className="navigation-container">{small ? <Nav /> : <BottomNav />}</div>
     </>
   );
 }
