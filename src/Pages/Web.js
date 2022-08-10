@@ -25,7 +25,7 @@ const WebsitePages = () => {
     <>
       {loading ? (
         <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <h1>Tunggu Bentar ya</h1>
+          <h1>Wait A Second</h1>
         </div>
       ) : (
         <div className="content-container">
