@@ -20,12 +20,12 @@ function App() {
         </div>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="About" element={<About />} />
           <Route path="Projects" element={<Projects />}>
-            <Route path="/Projects/" element={<Web />} />
-            <Route path="Design" element={<Design />} />
-            <Route path="UIUX" element={<UIUX />} />
+            <Route index element={<Web />} />
+            <Route path="design" element={<Design />} />
+            <Route path="uiux" element={<UIUX />} />
           </Route>
         </Routes>
       </div>

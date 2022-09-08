@@ -19,7 +19,7 @@ const WebsitePages = () => {
       .catch((error) => {
         console.log(error);
       });
-  });
+  }, []);
 
   return (
     <>

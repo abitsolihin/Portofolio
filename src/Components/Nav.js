@@ -33,7 +33,7 @@ const Nav = () => {
         <NavLink style={navLinkStyle} to="/About">
           <SiAboutdotme color="#202020" size={25} />
         </NavLink>
-        <NavLink style={navLinkStyle} to="/Projects">
+        <NavLink style={navLinkStyle} to="/Projects/">
           {({ isActive }) => (isActive ? <AiFillProject color="#202020" size={25} /> : <AiOutlineProject color="#202020" size={25} />)}
         </NavLink>
       </div>
