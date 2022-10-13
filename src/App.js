@@ -9,6 +9,7 @@ import UIUX from './Pages/UIUX';
 import Nav from './Components/Nav';
 import BottomNav from './Components/BottomNav';
 import { useMediaQuery } from '@material-ui/core';
+import { hydrate, render } from 'react-dom';
 
 function App() {
   const small = useMediaQuery('(min-width:500px)');
@@ -32,6 +33,12 @@ function App() {
       <div className="navigation-container">{small ? <Nav /> : <BottomNav />}</div>
     </>
   );
+}
+const rootElement = document.getElementById('root');
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
 }
 
 export default App;
