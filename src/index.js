@@ -1,22 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
 import '../src/index.css';
+import { BrowserRouter } from 'react-router-dom';
 import { hydrate, render } from 'react-dom';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>
-);
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    rootElement
+  );
 } else {
-  render(<App />, rootElement);
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    rootElement
+  );
 }
